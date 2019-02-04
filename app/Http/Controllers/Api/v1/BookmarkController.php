@@ -35,7 +35,7 @@ class BookmarkController extends Controller
             ->bookmarks();
 
         $collection = $collection
-            ->select('bookmarks.id', 'title', 'favourite', 'link', 'snippet', 'icon', 'category')
+            ->select('bookmarks.id', 'title', 'favourite', 'link', 'snippet', 'icon', 'category', 'updated_at')
             ->distinct();
 
         if (count($categories) || count($tags)) {
